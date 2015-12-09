@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		072C99EA1BC4EB2000CCC252 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C99E91BC4EB2000CCC252 /* main.m */; };
+		072C99ED1BC4EB2000CCC252 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C99EC1BC4EB2000CCC252 /* AppDelegate.m */; };
+		072C99F01BC4EB2000CCC252 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C99EF1BC4EB2000CCC252 /* ViewController.m */; };
+		072C99F31BC4EB2000CCC252 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 072C99F11BC4EB2000CCC252 /* Main.storyboard */; };
+		072C99F51BC4EB2000CCC252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 072C99F41BC4EB2000CCC252 /* Assets.xcassets */; };
+		072C99F81BC4EB2000CCC252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 072C99F61BC4EB2000CCC252 /* LaunchScreen.storyboard */; };
+		072C9A031BC4EB2000CCC252 /* Demo_QuartzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C9A021BC4EB2000CCC252 /* Demo_QuartzTests.m */; };
+		072C9A0E1BC4EB2000CCC252 /* Demo_QuartzUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C9A0D1BC4EB2000CCC252 /* Demo_QuartzUITests.m */; };
+		072C9A1D1BC4ECFD00CCC252 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C9A1C1BC4ECFD00CCC252 /* Test1ViewController.m */; };
+		072C9A221BC4ED4D00CCC252 /* Test1View.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C9A211BC4ED4D00CCC252 /* Test1View.m */; };
+		072C9A251BC4F51F00CCC252 /* MyLayerDelegate1.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C9A241BC4F51F00CCC252 /* MyLayerDelegate1.m */; };
+		076DA6651BCE33930011A82A /* Test2View.m in Sources */ = {isa = PBXBuildFile; fileRef = 076DA6601BCE33930011A82A /* Test2View.m */; };
+		076DA6661BCE33930011A82A /* Test2View2.m in Sources */ = {isa = PBXBuildFile; fileRef = 076DA6621BCE33930011A82A /* Test2View2.m */; };
+		076DA6691BCE33B80011A82A /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 076DA6681BCE33B80011A82A /* Test2ViewController.m */; };
+		076DA66D1BCE34E80011A82A /* ZJSStrokeLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 076DA66C1BCE34E80011A82A /* ZJSStrokeLable.m */; };
+		076DA6701BCE353B0011A82A /* Test3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 076DA66F1BCE353B0011A82A /* Test3ViewController.m */; };
+		07F5B0C81C0ECA5700309465 /* Test4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F5B0C71C0ECA5700309465 /* Test4ViewController.m */; };
+		07F5B0CB1C0ECABC00309465 /* Test4View1.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F5B0CA1C0ECABC00309465 /* Test4View1.m */; };
+		07F5B0CE1C0ECC6D00309465 /* Test4View2.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F5B0CD1C0ECC6D00309465 /* Test4View2.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		072C99FF1BC4EB2000CCC252 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 072C99DD1BC4EB2000CCC252 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 072C99E41BC4EB2000CCC252;
+			remoteInfo = Demo_Quartz;
+		};
+		072C9A0A1BC4EB2000CCC252 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 072C99DD1BC4EB2000CCC252 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 072C99E41BC4EB2000CCC252;
+			remoteInfo = Demo_Quartz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		072C99E51BC4EB2000CCC252 /* Demo_Quartz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo_Quartz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		072C99E91BC4EB2000CCC252 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		072C99EB1BC4EB2000CCC252 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		072C99EC1BC4EB2000CCC252 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		072C99EE1BC4EB2000CCC252 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		072C99EF1BC4EB2000CCC252 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		072C99F21BC4EB2000CCC252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		072C99F41BC4EB2000CCC252 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		072C99F71BC4EB2000CCC252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		072C99F91BC4EB2000CCC252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		072C99FE1BC4EB2000CCC252 /* Demo_QuartzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Demo_QuartzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		072C9A021BC4EB2000CCC252 /* Demo_QuartzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo_QuartzTests.m; sourceTree = "<group>"; };
+		072C9A041BC4EB2000CCC252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		072C9A091BC4EB2000CCC252 /* Demo_QuartzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Demo_QuartzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		072C9A0D1BC4EB2000CCC252 /* Demo_QuartzUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo_QuartzUITests.m; sourceTree = "<group>"; };
+		072C9A0F1BC4EB2000CCC252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		072C9A1B1BC4ECFD00CCC252 /* Test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
+		072C9A1C1BC4ECFD00CCC252 /* Test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
+		072C9A201BC4ED4D00CCC252 /* Test1View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1View.h; sourceTree = "<group>"; };
+		072C9A211BC4ED4D00CCC252 /* Test1View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1View.m; sourceTree = "<group>"; };
+		072C9A231BC4F51F00CCC252 /* MyLayerDelegate1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayerDelegate1.h; sourceTree = "<group>"; };
+		072C9A241BC4F51F00CCC252 /* MyLayerDelegate1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayerDelegate1.m; sourceTree = "<group>"; };
+		076DA65F1BCE33930011A82A /* Test2View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2View.h; sourceTree = "<group>"; };
+		076DA6601BCE33930011A82A /* Test2View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2View.m; sourceTree = "<group>"; };
+		076DA6611BCE33930011A82A /* Test2View2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2View2.h; sourceTree = "<group>"; };
+		076DA6621BCE33930011A82A /* Test2View2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2View2.m; sourceTree = "<group>"; };
+		076DA6671BCE33B80011A82A /* Test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
+		076DA6681BCE33B80011A82A /* Test2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
+		076DA66B1BCE34E80011A82A /* ZJSStrokeLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSStrokeLable.h; sourceTree = "<group>"; };
+		076DA66C1BCE34E80011A82A /* ZJSStrokeLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSStrokeLable.m; sourceTree = "<group>"; };
+		076DA66E1BCE353B0011A82A /* Test3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test3ViewController.h; sourceTree = "<group>"; };
+		076DA66F1BCE353B0011A82A /* Test3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test3ViewController.m; sourceTree = "<group>"; };
+		07F5B0C61C0ECA5700309465 /* Test4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test4ViewController.h; sourceTree = "<group>"; };
+		07F5B0C71C0ECA5700309465 /* Test4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test4ViewController.m; sourceTree = "<group>"; };
+		07F5B0C91C0ECABC00309465 /* Test4View1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test4View1.h; sourceTree = "<group>"; };
+		07F5B0CA1C0ECABC00309465 /* Test4View1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test4View1.m; sourceTree = "<group>"; };
+		07F5B0CC1C0ECC6D00309465 /* Test4View2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test4View2.h; sourceTree = "<group>"; };
+		07F5B0CD1C0ECC6D00309465 /* Test4View2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test4View2.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		072C99E21BC4EB2000CCC252 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		072C99FB1BC4EB2000CCC252 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		072C9A061BC4EB2000CCC252 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		072C99DC1BC4EB2000CCC252 = {
+			isa = PBXGroup;
+			children = (
+				072C99E71BC4EB2000CCC252 /* Demo_Quartz */,
+				072C9A011BC4EB2000CCC252 /* Demo_QuartzTests */,
+				072C9A0C1BC4EB2000CCC252 /* Demo_QuartzUITests */,
+				072C99E61BC4EB2000CCC252 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		072C99E61BC4EB2000CCC252 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				072C99E51BC4EB2000CCC252 /* Demo_Quartz.app */,
+				072C99FE1BC4EB2000CCC252 /* Demo_QuartzTests.xctest */,
+				072C9A091BC4EB2000CCC252 /* Demo_QuartzUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		072C99E71BC4EB2000CCC252 /* Demo_Quartz */ = {
+			isa = PBXGroup;
+			children = (
+				072C9A1E1BC4ED1900CCC252 /* views */,
+				072C99EB1BC4EB2000CCC252 /* AppDelegate.h */,
+				072C99EC1BC4EB2000CCC252 /* AppDelegate.m */,
+				072C99EE1BC4EB2000CCC252 /* ViewController.h */,
+				072C99EF1BC4EB2000CCC252 /* ViewController.m */,
+				072C99F11BC4EB2000CCC252 /* Main.storyboard */,
+				072C99F41BC4EB2000CCC252 /* Assets.xcassets */,
+				072C99F61BC4EB2000CCC252 /* LaunchScreen.storyboard */,
+				072C99F91BC4EB2000CCC252 /* Info.plist */,
+				072C99E81BC4EB2000CCC252 /* Supporting Files */,
+				072C9A1B1BC4ECFD00CCC252 /* Test1ViewController.h */,
+				072C9A1C1BC4ECFD00CCC252 /* Test1ViewController.m */,
+				076DA6671BCE33B80011A82A /* Test2ViewController.h */,
+				076DA6681BCE33B80011A82A /* Test2ViewController.m */,
+				076DA66E1BCE353B0011A82A /* Test3ViewController.h */,
+				076DA66F1BCE353B0011A82A /* Test3ViewController.m */,
+				07F5B0C61C0ECA5700309465 /* Test4ViewController.h */,
+				07F5B0C71C0ECA5700309465 /* Test4ViewController.m */,
+			);
+			path = Demo_Quartz;
+			sourceTree = "<group>";
+		};
+		072C99E81BC4EB2000CCC252 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				072C99E91BC4EB2000CCC252 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		072C9A011BC4EB2000CCC252 /* Demo_QuartzTests */ = {
+			isa = PBXGroup;
+			children = (
+				072C9A021BC4EB2000CCC252 /* Demo_QuartzTests.m */,
+				072C9A041BC4EB2000CCC252 /* Info.plist */,
+			);
+			path = Demo_QuartzTests;
+			sourceTree = "<group>";
+		};
+		072C9A0C1BC4EB2000CCC252 /* Demo_QuartzUITests */ = {
+			isa = PBXGroup;
+			children = (
+				072C9A0D1BC4EB2000CCC252 /* Demo_QuartzUITests.m */,
+				072C9A0F1BC4EB2000CCC252 /* Info.plist */,
+			);
+			path = Demo_QuartzUITests;
+			sourceTree = "<group>";
+		};
+		072C9A1E1BC4ED1900CCC252 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				07F5B0C21C0ECA1F00309465 /* test4 */,
+				076DA66A1BCE34AB0011A82A /* test3 */,
+				076DA65A1BCE33930011A82A /* test2 */,
+				072C9A1F1BC4ED1900CCC252 /* test1 */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		072C9A1F1BC4ED1900CCC252 /* test1 */ = {
+			isa = PBXGroup;
+			children = (
+				072C9A201BC4ED4D00CCC252 /* Test1View.h */,
+				072C9A211BC4ED4D00CCC252 /* Test1View.m */,
+				072C9A231BC4F51F00CCC252 /* MyLayerDelegate1.h */,
+				072C9A241BC4F51F00CCC252 /* MyLayerDelegate1.m */,
+			);
+			path = test1;
+			sourceTree = "<group>";
+		};
+		076DA65A1BCE33930011A82A /* test2 */ = {
+			isa = PBXGroup;
+			children = (
+				076DA65F1BCE33930011A82A /* Test2View.h */,
+				076DA6601BCE33930011A82A /* Test2View.m */,
+				076DA6611BCE33930011A82A /* Test2View2.h */,
+				076DA6621BCE33930011A82A /* Test2View2.m */,
+			);
+			path = test2;
+			sourceTree = "<group>";
+		};
+		076DA66A1BCE34AB0011A82A /* test3 */ = {
+			isa = PBXGroup;
+			children = (
+				076DA66B1BCE34E80011A82A /* ZJSStrokeLable.h */,
+				076DA66C1BCE34E80011A82A /* ZJSStrokeLable.m */,
+			);
+			path = test3;
+			sourceTree = "<group>";
+		};
+		07F5B0C21C0ECA1F00309465 /* test4 */ = {
+			isa = PBXGroup;
+			children = (
+				07F5B0C91C0ECABC00309465 /* Test4View1.h */,
+				07F5B0CA1C0ECABC00309465 /* Test4View1.m */,
+				07F5B0CC1C0ECC6D00309465 /* Test4View2.h */,
+				07F5B0CD1C0ECC6D00309465 /* Test4View2.m */,
+			);
+			path = test4;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		072C99E41BC4EB2000CCC252 /* Demo_Quartz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 072C9A121BC4EB2000CCC252 /* Build configuration list for PBXNativeTarget "Demo_Quartz" */;
+			buildPhases = (
+				072C99E11BC4EB2000CCC252 /* Sources */,
+				072C99E21BC4EB2000CCC252 /* Frameworks */,
+				072C99E31BC4EB2000CCC252 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Demo_Quartz;
+			productName = Demo_Quartz;
+			productReference = 072C99E51BC4EB2000CCC252 /* Demo_Quartz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		072C99FD1BC4EB2000CCC252 /* Demo_QuartzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 072C9A151BC4EB2000CCC252 /* Build configuration list for PBXNativeTarget "Demo_QuartzTests" */;
+			buildPhases = (
+				072C99FA1BC4EB2000CCC252 /* Sources */,
+				072C99FB1BC4EB2000CCC252 /* Frameworks */,
+				072C99FC1BC4EB2000CCC252 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				072C9A001BC4EB2000CCC252 /* PBXTargetDependency */,
+			);
+			name = Demo_QuartzTests;
+			productName = Demo_QuartzTests;
+			productReference = 072C99FE1BC4EB2000CCC252 /* Demo_QuartzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		072C9A081BC4EB2000CCC252 /* Demo_QuartzUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 072C9A181BC4EB2000CCC252 /* Build configuration list for PBXNativeTarget "Demo_QuartzUITests" */;
+			buildPhases = (
+				072C9A051BC4EB2000CCC252 /* Sources */,
+				072C9A061BC4EB2000CCC252 /* Frameworks */,
+				072C9A071BC4EB2000CCC252 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				072C9A0B1BC4EB2000CCC252 /* PBXTargetDependency */,
+			);
+			name = Demo_QuartzUITests;
+			productName = Demo_QuartzUITests;
+			productReference = 072C9A091BC4EB2000CCC252 /* Demo_QuartzUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		072C99DD1BC4EB2000CCC252 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "周建顺";
+				TargetAttributes = {
+					072C99E41BC4EB2000CCC252 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					072C99FD1BC4EB2000CCC252 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 072C99E41BC4EB2000CCC252;
+					};
+					072C9A081BC4EB2000CCC252 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 072C99E41BC4EB2000CCC252;
+					};
+				};
+			};
+			buildConfigurationList = 072C99E01BC4EB2000CCC252 /* Build configuration list for PBXProject "Demo_Quartz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 072C99DC1BC4EB2000CCC252;
+			productRefGroup = 072C99E61BC4EB2000CCC252 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				072C99E41BC4EB2000CCC252 /* Demo_Quartz */,
+				072C99FD1BC4EB2000CCC252 /* Demo_QuartzTests */,
+				072C9A081BC4EB2000CCC252 /* Demo_QuartzUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		072C99E31BC4EB2000CCC252 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				072C99F81BC4EB2000CCC252 /* LaunchScreen.storyboard in Resources */,
+				072C99F51BC4EB2000CCC252 /* Assets.xcassets in Resources */,
+				072C99F31BC4EB2000CCC252 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		072C99FC1BC4EB2000CCC252 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		072C9A071BC4EB2000CCC252 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		072C99E11BC4EB2000CCC252 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076DA6651BCE33930011A82A /* Test2View.m in Sources */,
+				072C9A1D1BC4ECFD00CCC252 /* Test1ViewController.m in Sources */,
+				072C99F01BC4EB2000CCC252 /* ViewController.m in Sources */,
+				076DA6701BCE353B0011A82A /* Test3ViewController.m in Sources */,
+				076DA6691BCE33B80011A82A /* Test2ViewController.m in Sources */,
+				072C99ED1BC4EB2000CCC252 /* AppDelegate.m in Sources */,
+				07F5B0CE1C0ECC6D00309465 /* Test4View2.m in Sources */,
+				072C99EA1BC4EB2000CCC252 /* main.m in Sources */,
+				07F5B0C81C0ECA5700309465 /* Test4ViewController.m in Sources */,
+				076DA66D1BCE34E80011A82A /* ZJSStrokeLable.m in Sources */,
+				076DA6661BCE33930011A82A /* Test2View2.m in Sources */,
+				07F5B0CB1C0ECABC00309465 /* Test4View1.m in Sources */,
+				072C9A251BC4F51F00CCC252 /* MyLayerDelegate1.m in Sources */,
+				072C9A221BC4ED4D00CCC252 /* Test1View.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		072C99FA1BC4EB2000CCC252 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				072C9A031BC4EB2000CCC252 /* Demo_QuartzTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		072C9A051BC4EB2000CCC252 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				072C9A0E1BC4EB2000CCC252 /* Demo_QuartzUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		072C9A001BC4EB2000CCC252 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 072C99E41BC4EB2000CCC252 /* Demo_Quartz */;
+			targetProxy = 072C99FF1BC4EB2000CCC252 /* PBXContainerItemProxy */;
+		};
+		072C9A0B1BC4EB2000CCC252 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 072C99E41BC4EB2000CCC252 /* Demo_Quartz */;
+			targetProxy = 072C9A0A1BC4EB2000CCC252 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		072C99F11BC4EB2000CCC252 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				072C99F21BC4EB2000CCC252 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		072C99F61BC4EB2000CCC252 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				072C99F71BC4EB2000CCC252 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		072C9A101BC4EB2000CCC252 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		072C9A111BC4EB2000CCC252 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		072C9A131BC4EB2000CCC252 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Demo_Quartz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nomo.zhou.Demo-Quartz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		072C9A141BC4EB2000CCC252 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Demo_Quartz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nomo.zhou.Demo-Quartz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		072C9A161BC4EB2000CCC252 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Demo_QuartzTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nomo.zhou.Demo-QuartzTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo_Quartz.app/Demo_Quartz";
+			};
+			name = Debug;
+		};
+		072C9A171BC4EB2000CCC252 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Demo_QuartzTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nomo.zhou.Demo-QuartzTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo_Quartz.app/Demo_Quartz";
+			};
+			name = Release;
+		};
+		072C9A191BC4EB2000CCC252 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Demo_QuartzUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nomo.zhou.Demo-QuartzUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Demo_Quartz;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		072C9A1A1BC4EB2000CCC252 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Demo_QuartzUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nomo.zhou.Demo-QuartzUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Demo_Quartz;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		072C99E01BC4EB2000CCC252 /* Build configuration list for PBXProject "Demo_Quartz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				072C9A101BC4EB2000CCC252 /* Debug */,
+				072C9A111BC4EB2000CCC252 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		072C9A121BC4EB2000CCC252 /* Build configuration list for PBXNativeTarget "Demo_Quartz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				072C9A131BC4EB2000CCC252 /* Debug */,
+				072C9A141BC4EB2000CCC252 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		072C9A151BC4EB2000CCC252 /* Build configuration list for PBXNativeTarget "Demo_QuartzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				072C9A161BC4EB2000CCC252 /* Debug */,
+				072C9A171BC4EB2000CCC252 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		072C9A181BC4EB2000CCC252 /* Build configuration list for PBXNativeTarget "Demo_QuartzUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				072C9A191BC4EB2000CCC252 /* Debug */,
+				072C9A1A1BC4EB2000CCC252 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 072C99DD1BC4EB2000CCC252 /* Project object */;
+}
