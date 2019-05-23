@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)startAnimation;
 @property (nonatomic, copy) NSArray *images;
+@property (nonatomic, copy) NSArray *animations;
 
 @end
 
