@@ -20,6 +20,8 @@
 		072C9A251BC4F51F00CCC252 /* MyLayerDelegate1.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C9A241BC4F51F00CCC252 /* MyLayerDelegate1.m */; };
 		07648F2E22951C5B00B97D35 /* ZJSProgressViewRing.m in Sources */ = {isa = PBXBuildFile; fileRef = 07648F2D22951C5B00B97D35 /* ZJSProgressViewRing.m */; };
 		07648F3122951C8F00B97D35 /* Test5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07648F3022951C8F00B97D35 /* Test5ViewController.m */; };
+		07648F35229520F700B97D35 /* ZJSTest6View.m in Sources */ = {isa = PBXBuildFile; fileRef = 07648F34229520F700B97D35 /* ZJSTest6View.m */; };
+		07648F382295211400B97D35 /* Test6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07648F372295211400B97D35 /* Test6ViewController.m */; };
 		076DA6651BCE33930011A82A /* Test2View.m in Sources */ = {isa = PBXBuildFile; fileRef = 076DA6601BCE33930011A82A /* Test2View.m */; };
 		076DA6661BCE33930011A82A /* Test2View2.m in Sources */ = {isa = PBXBuildFile; fileRef = 076DA6621BCE33930011A82A /* Test2View2.m */; };
 		076DA6691BCE33B80011A82A /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 076DA6681BCE33B80011A82A /* Test2ViewController.m */; };
@@ -74,6 +76,10 @@
 		07648F2D22951C5B00B97D35 /* ZJSProgressViewRing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSProgressViewRing.m; sourceTree = "<group>"; };
 		07648F2F22951C8F00B97D35 /* Test5ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test5ViewController.h; sourceTree = "<group>"; };
 		07648F3022951C8F00B97D35 /* Test5ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test5ViewController.m; sourceTree = "<group>"; };
+		07648F33229520F700B97D35 /* ZJSTest6View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSTest6View.h; sourceTree = "<group>"; };
+		07648F34229520F700B97D35 /* ZJSTest6View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSTest6View.m; sourceTree = "<group>"; };
+		07648F362295211400B97D35 /* Test6ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test6ViewController.h; sourceTree = "<group>"; };
+		07648F372295211400B97D35 /* Test6ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test6ViewController.m; sourceTree = "<group>"; };
 		076DA65F1BCE33930011A82A /* Test2View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2View.h; sourceTree = "<group>"; };
 		076DA6601BCE33930011A82A /* Test2View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2View.m; sourceTree = "<group>"; };
 		076DA6611BCE33930011A82A /* Test2View2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2View2.h; sourceTree = "<group>"; };
@@ -160,6 +166,8 @@
 				07F5B0C71C0ECA5700309465 /* Test4ViewController.m */,
 				07648F2F22951C8F00B97D35 /* Test5ViewController.h */,
 				07648F3022951C8F00B97D35 /* Test5ViewController.m */,
+				07648F362295211400B97D35 /* Test6ViewController.h */,
+				07648F372295211400B97D35 /* Test6ViewController.m */,
 			);
 			path = Demo_Quartz;
 			sourceTree = "<group>";
@@ -193,6 +201,7 @@
 		072C9A1E1BC4ED1900CCC252 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				07648F322295200C00B97D35 /* test6 */,
 				07648F2B22951C4800B97D35 /* test5 */,
 				07F5B0C21C0ECA1F00309465 /* test4 */,
 				076DA66A1BCE34AB0011A82A /* test3 */,
@@ -220,6 +229,15 @@
 				07648F2D22951C5B00B97D35 /* ZJSProgressViewRing.m */,
 			);
 			path = test5;
+			sourceTree = "<group>";
+		};
+		07648F322295200C00B97D35 /* test6 */ = {
+			isa = PBXGroup;
+			children = (
+				07648F33229520F700B97D35 /* ZJSTest6View.h */,
+				07648F34229520F700B97D35 /* ZJSTest6View.m */,
+			);
+			path = test6;
 			sourceTree = "<group>";
 		};
 		076DA65A1BCE33930011A82A /* test2 */ = {
@@ -320,6 +338,7 @@
 				TargetAttributes = {
 					072C99E41BC4EB2000CCC252 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 2CLLJBLFA9;
 					};
 					072C99FD1BC4EB2000CCC252 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -391,6 +410,7 @@
 				07648F3122951C8F00B97D35 /* Test5ViewController.m in Sources */,
 				076DA6691BCE33B80011A82A /* Test2ViewController.m in Sources */,
 				072C99ED1BC4EB2000CCC252 /* AppDelegate.m in Sources */,
+				07648F35229520F700B97D35 /* ZJSTest6View.m in Sources */,
 				07F5B0CE1C0ECC6D00309465 /* Test4View2.m in Sources */,
 				07648F2E22951C5B00B97D35 /* ZJSProgressViewRing.m in Sources */,
 				072C99EA1BC4EB2000CCC252 /* main.m in Sources */,
@@ -398,6 +418,7 @@
 				076DA66D1BCE34E80011A82A /* ZJSStrokeLable.m in Sources */,
 				076DA6661BCE33930011A82A /* Test2View2.m in Sources */,
 				07F5B0CB1C0ECABC00309465 /* Test4View1.m in Sources */,
+				07648F382295211400B97D35 /* Test6ViewController.m in Sources */,
 				072C9A251BC4F51F00CCC252 /* MyLayerDelegate1.m in Sources */,
 				072C9A221BC4ED4D00CCC252 /* Test1View.m in Sources */,
 			);
@@ -540,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2CLLJBLFA9;
 				INFOPLIST_FILE = Demo_Quartz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -552,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2CLLJBLFA9;
 				INFOPLIST_FILE = Demo_Quartz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

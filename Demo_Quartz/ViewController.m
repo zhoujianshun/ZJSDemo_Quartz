@@ -12,6 +12,7 @@
 #import "Test3ViewController.h"
 #import "Test4ViewController.h"
 #import "Test5ViewController.h"
+#import "Test6ViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -24,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.dataSource = @[@"UIKit和Core Graphics",@"画弧度",@"storke label",@"1像素的线", @"ProgressRing"];
+    self.dataSource = @[@"UIKit和Core Graphics",@"画弧度",@"storke label",@"1像素的线", @"ProgressRing", @"draw"];
 
     
 }
@@ -64,6 +65,9 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if(row == 4){
         Test5ViewController *vc = [[Test5ViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(row == 5){
+        Test6ViewController *vc = [[Test6ViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
