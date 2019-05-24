@@ -60,18 +60,37 @@
 @interface ZJSTest6View()
 
 @property (nonatomic, strong) CAShapeLayer *bgLayer;
-@property (nonatomic, strong) CALayer *imageLayer;
-@property (nonatomic, strong) CALayer *image2Layer;
+@property (nonatomic, strong) CALayer *imagePointLayer;
+@property (nonatomic, strong) CALayer *imagePoint2Layer;
 
 @property (nonatomic, assign) CFTimeInterval duration1;
 @property (nonatomic, assign) CFTimeInterval duration2;
 
-@property (nonatomic, copy) NSArray *animationLayers;;
 
+/// 光圈缩放动画
+@property (nonatomic, copy) NSArray *animationLayers;;
 @property (nonatomic, strong) CAShapeLayer *image1AnimationLayer;
 @property (nonatomic, strong) CAShapeLayer *image2AnimationLayer;
 @property (nonatomic, strong) CAShapeLayer *image3AnimationLayer;
 @property (nonatomic, strong) CAShapeLayer *image4AnimationLayer;
+@property (nonatomic, assign) CFTimeInterval imageAnimationDuration;
+
+@property (nonatomic, strong) UIColor *imageAnimationColor;
+@property (nonatomic, copy) NSArray *imagesLayerArray;
+@property (nonatomic, strong) CALayer *image1Layer;
+@property (nonatomic, strong) CALayer *image2Layer;
+@property (nonatomic, strong) CALayer *image3Layer;
+@property (nonatomic, strong) CALayer *image4Layer;
+
+
+// Wi-Fi波浪动画
+@property (nonatomic, copy) NSArray *waveAnimationLayers;;
+@property (nonatomic, strong) CAShapeLayer *wave1AnimationLayer;
+@property (nonatomic, strong) CAShapeLayer *wave2AnimationLayer;
+@property (nonatomic, strong) CAShapeLayer *wave3AnimationLayer;
+@property (nonatomic, assign) CFTimeInterval waveAnimationduration;
+
+
 
 @property (nonatomic, strong) UIColor *mainColor;
 
@@ -91,104 +110,87 @@
 
 -(void)commonInit{
     
-    _duration1 = 2.5;
-    _duration2 = 3;
+    _duration1 = 6;
+    _duration2 = 5;
     
-    _mainColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.4];
+    _imageAnimationDuration = 2.f;
+    _waveAnimationduration = 2.f;
     
-    _imageLayer = [[CALayer alloc] init];
-
-    if ([UIImage imageNamed:@"security_center_animation_flash_point"]) {
-        _imageLayer.contents = (id)[UIImage imageNamed:@"security_center_animation_flash_point"].CGImage;
-    }else{
-        _imageLayer.backgroundColor = [UIColor redColor].CGColor;
-    }
-
-    [self.layer addSublayer:_imageLayer];
+    _mainColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.3];
+    _imageAnimationColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
     
-    _image2Layer = [[CALayer alloc] init];
-//
-    if ([UIImage imageNamed:@"security_center_animation_flash_point"]) {
-        _image2Layer.contents = (id)[UIImage imageNamed:@"security_center_animation_flash_point"].CGImage;
-    }else{
-        _image2Layer.backgroundColor = [UIColor blueColor].CGColor;
-    }
-
-    [self.layer addSublayer:_image2Layer];
+ 
     
-
+    ////////////////////
     _image1AnimationLayer = [[CAShapeLayer alloc] init];
     _image2AnimationLayer = [[CAShapeLayer alloc] init];
     _image3AnimationLayer = [[CAShapeLayer alloc] init];
     _image4AnimationLayer = [[CAShapeLayer alloc] init];
     
-
-    
     _animationLayers = @[_image1AnimationLayer, _image2AnimationLayer,_image3AnimationLayer, _image4AnimationLayer];
     
     [_animationLayers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         CAShapeLayer *layer = obj;
-        [layer setFillColor:_mainColor.CGColor];
+        [layer setFillColor:_imageAnimationColor.CGColor];
         [self.layer addSublayer:layer];
     }];
-}
-
--(void)startAnimation{
-    
-    CGFloat width = CGRectGetWidth(self.frame) - 2 * kInterSpace;
-    CGFloat height = CGRectGetHeight(self.frame) - 2 * kInterSpace;
-    CGPoint center = CGPointMake(CGRectGetWidth(self.frame)/2.f, CGRectGetHeight(self.frame)/2.f);
-    
-    CGFloat radius = width > height ? height/2.f : width/2.f;
-    
-    //初始化圆点层
-    UIBezierPath* path = [[UIBezierPath alloc] init];
-    [path addArcWithCenter:center
-                    radius:radius
-                startAngle:0
-                  endAngle:2 * M_PI
-                 clockwise:1];
-  
-
-    [self addAnimationTo:_imageLayer path:path duration:self.duration1];
     
     
-    CGFloat  radius2 = radius  - 45.f/270.f*(radius*2);
+    ////////////////////////
+    _wave1AnimationLayer = [[CAShapeLayer alloc] init];
+    _wave2AnimationLayer = [[CAShapeLayer alloc] init];
+    _wave3AnimationLayer = [[CAShapeLayer alloc] init];
     
-    UIBezierPath* path2 = [[UIBezierPath alloc] init];
-    [path2 addArcWithCenter:center
-                    radius:radius2
-                startAngle:M_PI_2
-                  endAngle:2 * M_PI + M_PI_2
-                 clockwise:1];
+    _waveAnimationLayers = @[_wave1AnimationLayer, _wave2AnimationLayer, _wave3AnimationLayer];
     
-      [self addAnimationTo:_image2Layer path:path2 duration:self.duration2];
-    
-    
-    [self.animations  enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        CAShapeLayer *layer =   self.animationLayers[idx];
-        if ([obj boolValue]) {
-            
-            [self setupAnimationInLayer:layer];
-        }else{
-            [self removeAnimationInLayer:layer];
-        }
+    [_waveAnimationLayers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        CAShapeLayer *layer = obj;
+        layer.backgroundColor = [UIColor clearColor].CGColor;
+        layer.fillColor = [UIColor clearColor].CGColor;
+        layer.strokeColor = [UIColor whiteColor].CGColor;
+        layer.lineCap = kCALineCapRound;
+        [self.layer addSublayer:layer];
     }];
     
+    
+    ////////////////
+    
+    _image1Layer = [[CALayer alloc] init];
+    _image2Layer = [[CALayer alloc] init];
+    _image3Layer = [[CALayer alloc] init];
+    _image4Layer = [[CALayer alloc] init];
+    
+    _imagesLayerArray = @[_image1Layer, _image2Layer, _image3Layer, _image4Layer];
+    [_imagesLayerArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        CALayer *layer = obj;
+        [self.layer addSublayer:layer];
+    }];
+    
+    
+    
+    
+    /////////////////////
+    _imagePointLayer = [[CALayer alloc] init];
+    
+    if ([UIImage imageNamed:@"security_center_animation_flash_point"]) {
+        _imagePointLayer.contents = (__bridge id)[UIImage imageNamed:@"security_center_animation_flash_point"].CGImage;
+    }else{
+        _imagePointLayer.backgroundColor = [UIColor redColor].CGColor;
+    }
+    
+    [self.layer addSublayer:_imagePointLayer];
+    
+    
+    _imagePoint2Layer = [[CALayer alloc] init];
+    if ([UIImage imageNamed:@"security_center_animation_flash_point"]) {
+        _imagePoint2Layer.contents = (__bridge id)[UIImage imageNamed:@"security_center_animation_flash_point"].CGImage;
+    }else{
+        _imagePoint2Layer.backgroundColor = [UIColor blueColor].CGColor;
+    }
+    
+    [self.layer addSublayer:_imagePoint2Layer];
 }
--(void)addAnimationTo:(CALayer*)layer path:(UIBezierPath*)path duration:(CFTimeInterval)duration {
-    
-    
-    //创建一个帧动画需要 的圆周 路径，这个路径 与外圆圈一一致
-    CAKeyframeAnimation *animation1 = [CAKeyframeAnimation animation];
-    animation1.keyPath = @"position";
-    animation1.path = path.CGPath;
-    animation1.duration = duration;
-    animation1.repeatCount = MAXFLOAT;
-    
-    
-    [layer addAnimation:animation1 forKey:nil];
-}
+
 
 -(void)layoutSubviews{
     [super layoutSubviews];
@@ -202,12 +204,11 @@
     
     CGFloat w = 44/270.f * (2*radius);
     CGFloat h = 44/270.f * (2*radius);
-    self.imageLayer.frame = CGRectMake(CGRectGetWidth(self.frame)/2.f - w/2, CGRectGetHeight(self.frame)/2 - radius - h/2.f, w, h);
+    self.imagePointLayer.frame = CGRectMake(CGRectGetWidth(self.frame)/2.f - w/2, CGRectGetHeight(self.frame)/2 - radius - h/2.f, w, h);
     
     
     CGFloat  radius2 = radius  - 45.f/270.f*(radius*2);
-    
-    self.image2Layer.frame = CGRectMake(CGRectGetWidth(self.frame)/2.f - w/2, CGRectGetHeight(self.frame)/2 - radius2 - h/2.f, w, h);
+    self.imagePoint2Layer.frame = CGRectMake(CGRectGetWidth(self.frame)/2.f - w/2, CGRectGetHeight(self.frame)/2 - radius2 - h/2.f, w, h);
 }
 
 
@@ -221,10 +222,61 @@
     [self.mainColor setFill];
     [self.mainColor setStroke];
     
+    [self drawCenter:rect];
     [self drawPath1:rect];
     [self drawPath2:rect];
     [self drawPath3:rect];
     
+}
+
+-(void)drawCenter:(CGRect)rect{
+    CGFloat width = CGRectGetWidth(rect) - 2 * kInterSpace;
+    CGFloat height = CGRectGetHeight(rect) - 2 * kInterSpace;
+    CGPoint center = CGPointMake(CGRectGetWidth(rect)/2.f, CGRectGetHeight(rect)/2.f);
+    
+    CGFloat radius = width > height ? height/2.f : width/2.f;
+    CGFloat scale = ((radius*2)/270.f);
+    
+    // center image
+    CGFloat offset = 3*scale;
+    CGFloat imageWidth = 50 * scale;
+    CGFloat imageHeight = 60 * scale ;
+    CGRect imageRect = CGRectMake(center.x - imageWidth/2.f, center.y - imageHeight/2.f + offset, imageWidth, imageHeight);
+    
+    // oval
+    CGFloat  ovalHeight = 12 * scale;
+    CGFloat  ovalWidth = 60 * scale;
+    CGRect ovalRect = CGRectMake(center.x - ovalWidth/2.f, center.y + imageHeight/2.f - offset, ovalWidth, ovalHeight);
+    UIBezierPath *ovalPath = [UIBezierPath bezierPathWithOvalInRect:ovalRect];
+    [ovalPath fill];
+    
+    // draw center image
+    [[UIImage imageNamed:@"security_center_animation_shield"] drawInRect:imageRect];
+    
+    
+    CGFloat image2Width = 30 * scale;
+    CGFloat image2Height = 15 * scale ;
+    CGRect image2Rect = CGRectMake(CGRectGetMinX(imageRect) - image2Width/2.f, CGRectGetMinY(imageRect) - 3*scale, image2Width, image2Height);
+    [[UIImage imageNamed:@"security_center_animation_hours"] drawInRect:image2Rect];
+    //
+    
+    CGPoint waveCenter = CGPointMake(center.x + imageWidth/2.f - 1.5*scale, center.y - imageHeight/2.f + 6*scale);
+    CGFloat waveBorderWidth = 2*scale;
+    CGFloat wave1Radius = 5*scale;
+    CGFloat wave2Radius = wave1Radius + 4*scale;
+    CGFloat wave3Radius = wave2Radius + 4*scale;
+    
+    
+    [self drawArcInLayer:self.wave1AnimationLayer arcCenter:waveCenter radius:wave1Radius lineWidth:waveBorderWidth];
+    [self drawArcInLayer:self.wave2AnimationLayer arcCenter:waveCenter radius:wave2Radius lineWidth:waveBorderWidth];
+    [self drawArcInLayer:self.wave3AnimationLayer arcCenter:waveCenter radius:wave3Radius lineWidth:waveBorderWidth];
+}
+
+-(void)drawArcInLayer:(CAShapeLayer*)layer arcCenter:(CGPoint)center radius:(CGFloat)radius lineWidth:(CGFloat)lineWidth{
+    UIBezierPath *wavePath3 = [UIBezierPath bezierPathWithArcCenter:CGPointMake(0, radius) radius:radius startAngle:-M_PI_2 endAngle:0 clockwise:YES];
+    layer.frame = CGRectMake(center.x, center.y - radius, radius, radius);
+    layer.lineWidth = lineWidth;
+    layer.path = wavePath3.CGPath;
 }
 
 -(void)drawPath3:(CGRect)rect{
@@ -287,7 +339,7 @@
     }
     
     if (self.images[3]) {
-        [self drawImageWithImage:self.images[3] imageRadius:image1Radius orbitRadius:orbitRadius center:center degrees:image1Degrees];
+        [self drawImageAtIndex:3 imageRadius:image1Radius orbitRadius:orbitRadius center:center degrees:image1Degrees];
     }
     
     
@@ -370,9 +422,7 @@
     }
     
     if (self.images[0]) {
-
-        
-        [self drawImageWithImage:self.images[0] imageRadius:image3Radius orbitRadius:orbitRadius center:center degrees:image3Degrees];
+        [self drawImageAtIndex:0 imageRadius:image3Radius orbitRadius:orbitRadius center:center degrees:image3Degrees];
     }
 
     
@@ -385,8 +435,7 @@
     }
     
     if (self.images[1]) {
-     
-        [self drawImageWithImage:self.images[1] imageRadius:image2Radius orbitRadius:orbitRadius center:center degrees:image2Degrees];
+        [self drawImageAtIndex:1 imageRadius:image2Radius orbitRadius:orbitRadius center:center degrees:image2Degrees];
     }
    
     
@@ -400,7 +449,7 @@
     
 
     if (self.images[2]) {
-        [self drawImageWithImage:self.images[2] imageRadius:image1Radius orbitRadius:orbitRadius center:center degrees:image1Degrees];
+        [self drawImageAtIndex:2 imageRadius:image1Radius orbitRadius:orbitRadius center:center degrees:image1Degrees];
     }
     
     for (CGFloat i = 0; i < 360; i = i + 1.5) {
@@ -475,11 +524,86 @@
     
     CGRect image1Rect =   [self getRectWithCenter:center radius:imageRadius orbitRadius:orbitRadius degrees:degrees];
     [image drawInRect:image1Rect];
+    
 }
 
+-(void)drawImageAtIndex:(NSInteger)index imageRadius:(CGFloat)imageRadius orbitRadius:(CGFloat)orbitRadius center:(CGPoint)center degrees:(CGFloat)degrees{
+    
+    UIImage *image = self.images[index];
+    CALayer *layer = self.imagesLayerArray[index];
+    CGRect image1Rect =   [self getRectWithCenter:center radius:imageRadius orbitRadius:orbitRadius degrees:degrees];
+    layer.frame = image1Rect;
+    layer.contents = (__bridge id)image.CGImage;
+   
+    
+}
+
+#pragma mark - 动画
+
+
+-(void)startAnimation{
+    
+    CGFloat width = CGRectGetWidth(self.frame) - 2 * kInterSpace;
+    CGFloat height = CGRectGetHeight(self.frame) - 2 * kInterSpace;
+    CGPoint center = CGPointMake(CGRectGetWidth(self.frame)/2.f, CGRectGetHeight(self.frame)/2.f);
+    
+    CGFloat radius = width > height ? height/2.f : width/2.f;
+    
+    //初始化圆点层
+    UIBezierPath* path = [[UIBezierPath alloc] init];
+    [path addArcWithCenter:center
+                    radius:radius
+                startAngle:0
+                  endAngle:2 * M_PI
+                 clockwise:1];
+    
+    
+    [self addAnimationTo:_imagePointLayer path:path duration:self.duration1];
+    
+    
+    CGFloat  radius2 = radius  - 45.f/270.f*(radius*2);
+    
+    UIBezierPath* path2 = [[UIBezierPath alloc] init];
+    [path2 addArcWithCenter:center
+                     radius:radius2
+                 startAngle:M_PI_2
+                   endAngle:2 * M_PI + M_PI_2
+                  clockwise:1];
+    
+    [self addAnimationTo:_imagePoint2Layer path:path2 duration:self.duration2];
+    
+    
+    // 光圈缩放动画
+    [self.animations  enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        CAShapeLayer *layer =   self.animationLayers[idx];
+        if ([obj boolValue]) {
+            [self setupAnimationInLayer:layer];
+        }else{
+            [self removeAnimationInLayer:layer];
+        }
+    }];
+    
+    
+    [self removeWaveAnimation];
+    [self setupWaveAnimation];
+    
+}
+-(void)addAnimationTo:(CALayer*)layer path:(UIBezierPath*)path duration:(CFTimeInterval)duration {
+    
+    
+    //创建一个帧动画需要 的圆周 路径，这个路径 与外圆圈一一致
+    CAKeyframeAnimation *animation1 = [CAKeyframeAnimation animation];
+    animation1.keyPath = @"position";
+    animation1.path = path.CGPath;
+    animation1.duration = duration;
+    animation1.repeatCount = MAXFLOAT;
+    
+    
+    [layer addAnimation:animation1 forKey:nil];
+}
 
 -(void)setupAnimationInLayer:(CALayer*)layer {
-    CFTimeInterval duration = 1;
+    CFTimeInterval duration = _imageAnimationDuration;
     CFTimeInterval beginTime = CACurrentMediaTime();
 //    NSArray *beginTimes = @[@0, @0.2, @0.4];
     
@@ -515,6 +639,43 @@
     [layer removeAnimationForKey:@"scaleAnimation"];
 }
 
+
+
+-(void)setupWaveAnimation{
+    CFTimeInterval duration = _waveAnimationduration;
+    CFTimeInterval beginTime = CACurrentMediaTime();
+
+    NSArray *values = @[@[@0.5, @0.5, @1, @1],
+                        @[@0.5, @0.5, @0.5, @1, @1],
+                        @[@0.5, @0.5, @0.5, @0.5, @1]];
+
+    CAKeyframeAnimation *opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
+    
+    opacityAnimation.duration = duration;
+    opacityAnimation.keyTimes = @[@0, @0.25, @0.5, @0.75, @1];
+    opacityAnimation.removedOnCompletion = NO;
+    opacityAnimation.duration = duration;
+    opacityAnimation.repeatCount = MAXFLOAT;
+    opacityAnimation.removedOnCompletion = NO;
+    
+    opacityAnimation.beginTime = beginTime;
+    
+    [self.waveAnimationLayers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        opacityAnimation.values = values[idx];
+        CAShapeLayer *layer = obj;
+        [layer addAnimation:opacityAnimation forKey:@"waveAnimation"];
+        
+    }];
+    
+}
+
+-(void)removeWaveAnimation{
+    [self.waveAnimationLayers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+         CAShapeLayer *layer = obj;
+        [layer removeAnimationForKey:@"waveAnimation"];
+    }];
+}
+
 -(void)setupLayer:(CAShapeLayer*)layer center:(CGPoint)center radius:(CGFloat)radius orbitRadius:(CGFloat)orbitRadius degrees:(CGFloat)degrees{
     
     UIBezierPath *image1BgPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 2*radius, 2*radius) cornerRadius:radius];
@@ -538,11 +699,5 @@
     _animations = [animations copy];
     [self setNeedsDisplay];
 }
-//-(NSMutableArray *)animationLayers{
-//    if (!_animationLayers) {
-//        animationLayers = [[NSMutableArray alloc] init];
-//    }
-//
-//    return animationLayers;
-//}
+
 @end

@@ -20,28 +20,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Demo_Quartz/views/test6/ZJSTest6View.m"
-            timestampString = "580300639.626163"
+            timestampString = "580375047.625122"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "-startAnimation"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Demo_Quartz/views/test6/ZJSTest6View.m"
-            timestampString = "580300639.627012"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "525"
-            endingLineNumber = "525"
-            landmarkName = "-setupLayer:center:radius:orbitRadius:degrees:"
+            startingLineNumber = "536"
+            endingLineNumber = "536"
+            landmarkName = "-drawImageAtIndex:imageRadius:orbitRadius:center:degrees:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
