@@ -97,7 +97,6 @@
 @end
 
 @implementation ZJSTest6View
-
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
@@ -119,7 +118,7 @@
     _mainColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.3];
     _imageAnimationColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
     
- 
+    
     
     ////////////////////
     _image1AnimationLayer = [[CAShapeLayer alloc] init];
@@ -131,7 +130,7 @@
     
     [_animationLayers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         CAShapeLayer *layer = obj;
-        [layer setFillColor:_imageAnimationColor.CGColor];
+        [layer setFillColor:self.imageAnimationColor.CGColor];
         [self.layer addSublayer:layer];
     }];
     
@@ -200,7 +199,7 @@
     
     CGFloat radius = width > height ? height/2.f : width/2.f;
     
-//    CGPoint center = CGPointMake(CGRectGetWidth(self.frame)/2.f, CGRectGetHeight(self.frame)/2.f);
+    //    CGPoint center = CGPointMake(CGRectGetWidth(self.frame)/2.f, CGRectGetHeight(self.frame)/2.f);
     
     CGFloat w = 44/270.f * (2*radius);
     CGFloat h = 44/270.f * (2*radius);
@@ -285,7 +284,7 @@
     CGPoint center = CGPointMake(CGRectGetWidth(rect)/2.f, CGRectGetHeight(rect)/2.f);
     
     CGFloat radius = width > height ? height/2.f : width/2.f;
-   
+    
     CGFloat  radius2 = radius  - 78.f/270.f*(radius*2);
     
     UIBezierPath* path2 = [[UIBezierPath alloc] init];
@@ -328,15 +327,14 @@
     ZJSIntervalF *interval1 = [[ZJSIntervalF alloc] initWithStart:31.5 end:66.5];
     ZJSIntervalF *interval2 = [[ZJSIntervalF alloc] initWithStart:311.5 end:328.5];
     NSArray *intervals = @[interval1, interval2];
-
-   // image 3
+    
+    // image 3
     CGFloat image1Radius = (60.f * scale)/2.f;
     CGFloat image1Degrees =(interval1.start + (interval1.end - interval1.start)/2.f);
     
     
-    if ([self.animations[3] boolValue]) {
-        [self setupLayer:self.animationLayers[3] center:center radius:((33*scale/2.f) + 2) orbitRadius:orbitRadius degrees:image1Degrees];
-    }
+    
+    [self setupAtIndex:3 center:center radius:((33*scale/2.f) + 2) orbitRadius:orbitRadius degrees:image1Degrees];
     
     if (self.images[3]) {
         [self drawImageAtIndex:3 imageRadius:image1Radius orbitRadius:orbitRadius center:center degrees:image1Degrees];
@@ -368,7 +366,7 @@
     
     
     for (ZJSIntervalF *interval in intervals) {
-
+        
         UIBezierPath *path1L = [self pathWithCenter:center radius:pointRadius2 orbitRadius:orbitRadius degrees:(interval.start + 0.5)];
         [path1L fill];
         
@@ -386,7 +384,7 @@
     
     UIBezierPath *path1C = [self pathWithCenter:center radius:pointRadius4 orbitRadius:orbitRadius degrees:(interval2.start + (interval2.end - interval2.start)/2.f)];
     [path1C fill];
-
+    
 }
 
 
@@ -404,7 +402,7 @@
     CGFloat pointRadius3 = 3;
     CGFloat pointRadius4 = 5;
     
-
+    
     ZJSIntervalF *interval1 = [[ZJSIntervalF alloc] initWithStart:7 end:30.5];
     ZJSIntervalF *interval2 = [[ZJSIntervalF alloc] initWithStart:103 end:129.5];
     ZJSIntervalF *interval3 = [[ZJSIntervalF alloc] initWithStart:163 end:174.5];
@@ -417,37 +415,36 @@
     CGFloat image3Radius = (60.f*scale)/2.f;
     CGFloat image3Degrees =(interval1.start + (interval1.end - interval1.start)/2.f);
     
-    if ([self.animations[0] boolValue]) {
-        [self setupLayer:self.animationLayers[0] center:center radius:(((33.f*scale)/2.f) + 2) orbitRadius:orbitRadius degrees:image3Degrees];
-    }
+    
+    [self setupAtIndex:0 center:center radius:(((33.f*scale)/2.f) + 2) orbitRadius:orbitRadius degrees:image3Degrees];
+    
     
     if (self.images[0]) {
         [self drawImageAtIndex:0 imageRadius:image3Radius orbitRadius:orbitRadius center:center degrees:image3Degrees];
     }
-
+    
     
     // image 2
     CGFloat image2Radius = (60*scale)/2.f;
     CGFloat image2Degrees =(interval2.start + (interval2.end - interval2.start)/2.f);
     
-    if ([self.animations[1] boolValue]) {
-        [self setupLayer:self.animationLayers[1] center:center radius:(((40.f*scale)/2.f) + 2) orbitRadius:orbitRadius degrees:image2Degrees];
-    }
+    
+    [self setupAtIndex:1 center:center radius:(((40.f*scale)/2.f) + 2) orbitRadius:orbitRadius degrees:image2Degrees];
+    
     
     if (self.images[1]) {
         [self drawImageAtIndex:1 imageRadius:image2Radius orbitRadius:orbitRadius center:center degrees:image2Degrees];
     }
-   
+    
     
     // image 3
     CGFloat image1Radius = (60*scale)/2.f;
     CGFloat image1Degrees =(interval4.start + (interval4.end - interval4.start)/2.f);
     
-    if ([self.animations[2] boolValue]) {
-        [self setupLayer:self.animationLayers[2] center:center radius:(image1Radius + 2) orbitRadius:orbitRadius degrees:image1Degrees];
-    }
     
-
+    [self setupAtIndex:2 center:center radius:(image1Radius + 2) orbitRadius:orbitRadius degrees:image1Degrees];
+    
+    
     if (self.images[2]) {
         [self drawImageAtIndex:2 imageRadius:image1Radius orbitRadius:orbitRadius center:center degrees:image1Degrees];
     }
@@ -497,13 +494,13 @@
 #pragma mark -
 
 -(UIBezierPath*)pathWithCenter:(CGPoint)center radius:(CGFloat)radius orbitRadius:(CGFloat)orbitRadius degrees:(CGFloat)degrees{
-
+    
     CGFloat arc = M_PI*2 * (degrees/360.f) - M_PI_2;
     CGFloat cx = orbitRadius * cosf(arc);
     CGFloat cy = orbitRadius * sinf(arc);
     CGFloat x = center.x + cx - radius;
     CGFloat y = center.y + cy - radius;
-  
+    
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(x, y, 2*radius, 2*radius) cornerRadius:radius];
     return path;
 }
@@ -520,7 +517,7 @@
 }
 
 -(void)drawImageWithImage:(UIImage*)image imageRadius:(CGFloat)imageRadius orbitRadius:(CGFloat)orbitRadius center:(CGPoint)center degrees:(CGFloat)degrees{
-
+    
     
     CGRect image1Rect =   [self getRectWithCenter:center radius:imageRadius orbitRadius:orbitRadius degrees:degrees];
     [image drawInRect:image1Rect];
@@ -534,7 +531,7 @@
     CGRect image1Rect =   [self getRectWithCenter:center radius:imageRadius orbitRadius:orbitRadius degrees:degrees];
     layer.frame = image1Rect;
     layer.contents = (__bridge id)image.CGImage;
-   
+    
     
 }
 
@@ -573,6 +570,15 @@
     [self addAnimationTo:_imagePoint2Layer path:path2 duration:self.duration2];
     
     
+    
+    [self startImagesScaleAnimation];
+    
+    [self removeWaveAnimation];
+    [self setupWaveAnimation];
+    
+}
+
+-(void)startImagesScaleAnimation{
     // 光圈缩放动画
     [self.animations  enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         CAShapeLayer *layer =   self.animationLayers[idx];
@@ -582,12 +588,8 @@
             [self removeAnimationInLayer:layer];
         }
     }];
-    
-    
-    [self removeWaveAnimation];
-    [self setupWaveAnimation];
-    
 }
+
 -(void)addAnimationTo:(CALayer*)layer path:(UIBezierPath*)path duration:(CFTimeInterval)duration {
     
     
@@ -597,15 +599,17 @@
     animation1.path = path.CGPath;
     animation1.duration = duration;
     animation1.repeatCount = MAXFLOAT;
+    animation1.removedOnCompletion = NO;
     
-    
-    [layer addAnimation:animation1 forKey:nil];
+    if (![layer.animationKeys containsObject:@"position"]) {
+        [layer addAnimation:animation1 forKey:@"position"];
+    }
 }
 
 -(void)setupAnimationInLayer:(CALayer*)layer {
     CFTimeInterval duration = _imageAnimationDuration;
     CFTimeInterval beginTime = CACurrentMediaTime();
-//    NSArray *beginTimes = @[@0, @0.2, @0.4];
+    //    NSArray *beginTimes = @[@0, @0.2, @0.4];
     
     CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     
@@ -614,25 +618,27 @@
     scaleAnimation.toValue = @1;
     scaleAnimation.removedOnCompletion = NO;
     
-   CAKeyframeAnimation *opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
+    CAKeyframeAnimation *opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
     
     opacityAnimation.duration = duration;
     opacityAnimation.keyTimes = @[@0, @0.05,@1];
     opacityAnimation.values = @[@0, @1, @0];
     opacityAnimation.removedOnCompletion = NO;
     
-   CAAnimationGroup *animation = [[CAAnimationGroup alloc] init];
-   animation.animations = @[scaleAnimation, opacityAnimation];
+    CAAnimationGroup *animation = [[CAAnimationGroup alloc] init];
+    animation.animations = @[scaleAnimation, opacityAnimation];
     
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-
+    
     animation.duration = duration;
     animation.repeatCount = MAXFLOAT;
     animation.removedOnCompletion = NO;
     
     animation.beginTime = beginTime;
     
-    [layer addAnimation:animation forKey:@"scaleAnimation"];
+    if (![layer.animationKeys containsObject:@"scaleAnimation"]) {
+        [layer addAnimation:animation forKey:@"scaleAnimation"];
+    }
 }
 
 -(void)removeAnimationInLayer:(CALayer*)layer {
@@ -644,11 +650,11 @@
 -(void)setupWaveAnimation{
     CFTimeInterval duration = _waveAnimationduration;
     CFTimeInterval beginTime = CACurrentMediaTime();
-
+    
     NSArray *values = @[@[@0.5, @0.5, @1, @1],
                         @[@0.5, @0.5, @0.5, @1, @1],
                         @[@0.5, @0.5, @0.5, @0.5, @1]];
-
+    
     CAKeyframeAnimation *opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
     
     opacityAnimation.duration = duration;
@@ -663,7 +669,9 @@
     [self.waveAnimationLayers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         opacityAnimation.values = values[idx];
         CAShapeLayer *layer = obj;
-        [layer addAnimation:opacityAnimation forKey:@"waveAnimation"];
+        if (![layer.animationKeys containsObject:@"waveAnimation"]) {
+            [layer addAnimation:opacityAnimation forKey:@"waveAnimation"];
+        }
         
     }];
     
@@ -671,20 +679,23 @@
 
 -(void)removeWaveAnimation{
     [self.waveAnimationLayers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-         CAShapeLayer *layer = obj;
+        CAShapeLayer *layer = obj;
         [layer removeAnimationForKey:@"waveAnimation"];
     }];
 }
 
--(void)setupLayer:(CAShapeLayer*)layer center:(CGPoint)center radius:(CGFloat)radius orbitRadius:(CGFloat)orbitRadius degrees:(CGFloat)degrees{
+-(void)setupAtIndex:(NSInteger)index center:(CGPoint)center radius:(CGFloat)radius orbitRadius:(CGFloat)orbitRadius degrees:(CGFloat)degrees{
+    
+    CAShapeLayer *layer = self.animationLayers[index];
+    BOOL animation = [self.animations[index] boolValue];
     
     UIBezierPath *image1BgPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 2*radius, 2*radius) cornerRadius:radius];
     
     CGRect image1Rect = [self getRectWithCenter:center radius:radius orbitRadius:orbitRadius degrees:degrees];
-    
-    layer.path = image1BgPath.CGPath;
     layer.frame = image1Rect;
- 
+    layer.path = image1BgPath.CGPath;
+    layer.hidden = !animation;
+    
 }
 
 
@@ -697,7 +708,9 @@
 
 -(void)setAnimations:(NSArray *)animations{
     _animations = [animations copy];
-    [self setNeedsDisplay];
+    [self startImagesScaleAnimation];
 }
+
+
 
 @end

@@ -28,11 +28,11 @@
     
     [self.view addSubview:test6];
     
-    test6.images = @[[UIImage imageNamed:@"security_center_animation_light_cam_highlight"],
-                     [UIImage imageNamed:@"security_center_animation_gas_highlight"],
-                     [UIImage imageNamed:@"security_center_animation_sens8_highlight"],
-                     [UIImage imageNamed:@"security_center_animation_smoke_highlight"],
-                     ];
+//    test6.images = @[[UIImage imageNamed:@"security_center_animation_light_cam_highlight"],
+//                     [UIImage imageNamed:@"security_center_animation_gas_highlight"],
+//                     [UIImage imageNamed:@"security_center_animation_sens8_highlight"],
+//                     [UIImage imageNamed:@"security_center_animation_smoke_highlight"],
+//                     ];
     
     test6.animations = @[@YES,@YES,@YES,@YES];
     [test6 startAnimation];
